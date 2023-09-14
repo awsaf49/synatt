@@ -122,3 +122,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.vscode/
+
+dummy.ipynb
+
+notebooks/data-split.ipynb

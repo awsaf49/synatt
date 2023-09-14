@@ -1,0 +1,11 @@
+{
+    "TRAIN_DATA_DIR": "./data/spcup_2022_training_part1/spcup_2022_training_part1/",
+    "UNSEEN_DATA_DIR": "./data/spcup_2022_unseen/spcup_2022_unseen/",
+    "TEST1_DATA_DIR": "./data/spcup_2022_eval_part1/spcup_2022_eval_part1/",
+    "TEST2_DATA_DIR": "./data/spcup_2022_eval_part2/spcup_2022_eval_part2/",
+    "LJ_DATA_DIR": "./data/ljspeech-sr16k-dataset/",
+    "VCTK_DATA_DIR": "./data/vctk-sr16k-dataset/",
+    "LIBRI_DATA_DIR": "./data/librispeech-small-dataset/",
+    "SYNTHETIC_DATA_DIR": "./data/aps22-synthetic-dataset/",
+    "PSEUDO_DATA_DIR": "./data/pseudo/"
+}

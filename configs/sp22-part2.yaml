@@ -1,0 +1,128 @@
+wandb: true
+anonymous: never # never, allow, must
+debug: false
+all_data: true
+pseudo: false
+natural_speech: true
+lj_data: true
+lj_frac: 0.48
+vctk_data: true
+vctk_frac: 0.139
+libri_data: false
+libri_frac: 0.136
+synthetic_speech: true
+syn_frac: 0.50
+
+exp_name: # experiment name
+comment: ''  # comment for the experiment
+notebook_link: '' # link of the notebook
+verbose: 0
+device: GPU
+model_name: 'EfficientNetB0'
+disable_bn: false
+freeze_bn: false
+pretrain: 'imagenet'
+seed: 42
+folds: 5
+selected_folds:
+- 0
+- 1
+- 2
+- 3
+- 4
+
+## Loss
+loss: 'CCE' # BCE, CCE, Hinge, Focal
+focal_gamma: 2.0 # gamma for focal loss
+focal_alpha: 0.25 # alpha for focal loss
+label_smoothing: 0.05 # label smoothing
+optimizer: 'Adam' # AdamW, RectifiedAdam, Adam, Adagrad, SGD, Yogi
+
+## Audio Params
+duration: 8 # second
+pad_mode: 'constant' # pad mode for duration
+sample_rate: 16000
+nfft: 2048
+window: 2048
+fmin: 20
+fmax: 8000
+normalize: true
+img_size:
+- 256
+- 512
+# resize_with_pad: false
+
+## Training Params
+batch_size: 32
+steps_per_execution: 32 # should be between 2 & `steps_per_epoch`
+infer_bs_scale: 2.0
+epochs: 25
+save_best_only: false # save only the best model instead of all. model.h5 -> last epoch not best_epoch
+
+## Augmentation
+augment: true
+
+# audio augment
+audio_augment_prob: 0.80
+timeshift_prob: 0.0
+timereverse_prob: 0.0
+# gaussian noise
+gn_prob: 0.5
+
+# spec augment
+spec_augment_prob: 0.80
+# random flip
+hflip: false # horizontal flip
+vflip: false # vertical flip
+# mixup
+mixup_prob: 0.65
+mixup_alpha: 2.5
+# cutmix
+cutmix_prob: 0.0
+cutmix_alpha: 2.5
+# time-freq masking
+mask_prob: 0.75
+freq_mask: 16
+time_mask: 64
+# jpeg compress
+jc_prob: 0.0
+jc_quality:
+- 85
+- 95
+
+# Learning Rate & Scheduler
+lr: 0.001 # base_lr
+lr_max: 1.05e-6 # max lr - will be multiplied by batch_size
+lr_min: 0.85e-6 # min lr
+lr_ramp_ep: 5 # warming up epochs
+lr_sus_ep: 0 # sustain epochs lr after warming up
+lr_decay: 0.8 # decay rate
+scheduler: exp #cosine, exp, step
+
+# Prediction Params
+tta: 1 # test time augmentation
+num_features: 64 # number of features after global average pooling
+final_act: softmax
+agg: mean # aggregation function to merge prediction
+monitor: 'val_f1_score' # metric to monitor
+monitor_mode: 'max'
+class_labels:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+class_names:
+- algo_0
+- algo_1
+- algo_2
+- algo_3
+- algo_4
+- algo_5
+tab_cols:
+- filename
+- speaker_id
+- source
+target_col:
+- label  

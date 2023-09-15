@@ -88,7 +88,8 @@ Install necessary dependencies using following command,
 ```
 
 ## 1. Data Preparation
-* Step 1: Competition data needs to be in the `./data/` folder. It is mandatory to have the data in exact same format like it was provided.
+* Step 1: Competition data needs to be in the `./data/` folder. It is mandatory to have the data in exact same format like it was provided. SP Cup dataset can be accessed from kaggle using below link,
+    * [SP Cup 2022 Dataset](https://www.kaggle.com/datasets/awsaf49/sp-cup-2022-dataset)
 
 * Step 2: External datasets need to be downloaded from following links and need to be in the `./data/` folder,
     1. LJSpeech: [link](https://www.kaggle.com/datasets/awsaf49/ljspeech-sr16k-dataset) (~2GB)

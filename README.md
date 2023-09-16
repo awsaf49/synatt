@@ -551,7 +551,7 @@ To generate prediction for **eval_part2** data using **provided** checkpoints ru
 --infer-path=data/spcup_2022_eval_part2/spcup_2022_eval_part2\
 --output=output/result/pred_part2.csv
 ```
-
+</details>
 
 # Acknowledgement
 The authors thank the IEEE Signal Processing Society, ISPL at Politecnico di Milano (Italy), and MISL at Drexel University (USA) for hosting the [IEEE SP Cup at ICASSP 2022](https://signalprocessingsociety.org/community-involvement/ieee-signal-processing-cup-2022), which inspired this work.

@@ -553,5 +553,15 @@ To generate prediction for **eval_part2** data using **provided** checkpoints ru
 ```
 </details>
 
+# Citation
+```bib
+@article{rahman2023syn,
+  title={Syn-Att: Synthetic Speech Attribution via Semi-Supervised Unknown Multi-Class Ensemble of CNNs},
+  author={Rahman, Md Awsafur and Paul, Bishmoy and Sarker, Najibul Haque and Hakim, Zaber Ibn Abdul and Fattah, Shaikh Anowarul and Saquib, Mohammad},
+  journal={arXiv preprint arXiv:2309.08146},
+  year={2023}
+}
+```
+
 # Acknowledgement
 The authors thank the IEEE Signal Processing Society, ISPL at Politecnico di Milano (Italy), and MISL at Drexel University (USA) for hosting the [IEEE SP Cup at ICASSP 2022](https://signalprocessingsociety.org/community-involvement/ieee-signal-processing-cup-2022), which inspired this work.
